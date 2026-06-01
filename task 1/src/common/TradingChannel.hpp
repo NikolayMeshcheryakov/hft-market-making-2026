@@ -2,7 +2,8 @@
 #include "OrderMessage.hpp"
 #include "SPSCQueue.hpp"
 
-namespace cmf {
+namespace cmf
+{
 
 // ── TradingChannel ────────────────────────────────────────────────────────
 //
@@ -15,7 +16,8 @@ namespace cmf {
 //   engine_to_backtest: TradingEngine is producer, BacktestEngine is consumer
 //   backtest_to_engine: BacktestEngine is producer, TradingEngine is consumer
 
-struct TradingChannel {
+struct TradingChannel
+{
     // TradingEngine → BacktestEngine: NewOrder, CancelOrder, ModifyOrder
     SPSCQueue<OrderMsg, 4096> engine_to_backtest;
 
